@@ -102,5 +102,15 @@ function handleClick() {
         });
         hideLoader()
         showLoadMoreButton()
+    }).catch(error => {
+        iziToast.show({
+                message: error.message,
+                 messageColor: 'white',
+                backgroundColor: 'red',
+                maxWidth: "432px",
+                close: true,
+                position: "topRight",
+        })
+        hideLoader();
     })
 }
